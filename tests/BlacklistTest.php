@@ -3,34 +3,34 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test;
+namespace Jesusalc\JWTAuth\Test;
 
 use Mockery;
-use Tymon\JWTAuth\Blacklist;
-use Tymon\JWTAuth\Claims\Expiration;
-use Tymon\JWTAuth\Claims\IssuedAt;
-use Tymon\JWTAuth\Claims\Issuer;
-use Tymon\JWTAuth\Claims\JwtId;
-use Tymon\JWTAuth\Claims\NotBefore;
-use Tymon\JWTAuth\Claims\Subject;
-use Tymon\JWTAuth\Contracts\Providers\Storage;
-use Tymon\JWTAuth\Factory;
+use Jesusalc\JWTAuth\Blacklist;
+use Jesusalc\JWTAuth\Claims\Expiration;
+use Jesusalc\JWTAuth\Claims\IssuedAt;
+use Jesusalc\JWTAuth\Claims\Issuer;
+use Jesusalc\JWTAuth\Claims\JwtId;
+use Jesusalc\JWTAuth\Claims\NotBefore;
+use Jesusalc\JWTAuth\Claims\Subject;
+use Jesusalc\JWTAuth\Contracts\Providers\Storage;
+use Jesusalc\JWTAuth\Factory;
 
 class BlacklistTest extends AbstractTestCase
 {
     /**
-     * @var \Tymon\JWTAuth\Contracts\Providers\Storage|\Mockery\MockInterface
+     * @var \Jesusalc\JWTAuth\Contracts\Providers\Storage|\Mockery\MockInterface
      */
     protected $storage;
 
     /**
-     * @var \Tymon\JWTAuth\Blacklist
+     * @var \Jesusalc\JWTAuth\Blacklist
      */
     protected $blacklist;
 

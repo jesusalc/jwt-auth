@@ -5,21 +5,21 @@ declare(strict_types=1);
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth;
+namespace Jesusalc\JWTAuth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Traits\ForwardsCalls;
-use Tymon\JWTAuth\Claims\HashedSubject;
-use Tymon\JWTAuth\Contracts\JWTSubject;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Http\Parser\Parser;
-use Tymon\JWTAuth\Support\CustomClaims;
+use Jesusalc\JWTAuth\Claims\HashedSubject;
+use Jesusalc\JWTAuth\Contracts\JWTSubject;
+use Jesusalc\JWTAuth\Exceptions\JWTException;
+use Jesusalc\JWTAuth\Http\Parser\Parser;
+use Jesusalc\JWTAuth\Support\CustomClaims;
 
 class JWT
 {
@@ -98,7 +98,7 @@ class JWT
      * Alias to get the payload, and as a result checks that
      * the token is valid i.e. not expired or blacklisted.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \Jesusalc\JWTAuth\Exceptions\JWTException
      */
     public function checkOrFail(): Payload
     {
@@ -108,7 +108,7 @@ class JWT
     /**
      * Check that the token is valid.
      *
-     * @return \Tymon\JWTAuth\Payload|bool
+     * @return \Jesusalc\JWTAuth\Payload|bool
      */
     public function check(bool $getPayload = false)
     {
@@ -140,7 +140,7 @@ class JWT
     /**
      * Parse the token from the request.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \Jesusalc\JWTAuth\Exceptions\JWTException
      */
     public function parseToken(): self
     {
@@ -188,7 +188,7 @@ class JWT
     /**
      * Set the token.
      *
-     * @param  \Tymon\JWTAuth\Token|string  $token
+     * @param  \Jesusalc\JWTAuth\Token|string  $token
      */
     public function setToken($token): self
     {
@@ -212,7 +212,7 @@ class JWT
     /**
      * Ensure that a token is available.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \Jesusalc\JWTAuth\Exceptions\JWTException
      */
     protected function requireToken(): void
     {
@@ -251,7 +251,7 @@ class JWT
     /**
      * Get the Parser instance.
      *
-     * @return \Tymon\JWTAuth\Http\Parser\Parser|\Tymon\JWTAuth\Contracts\Http\Parser
+     * @return \Jesusalc\JWTAuth\Http\Parser\Parser|\Jesusalc\JWTAuth\Contracts\Http\Parser
      */
     public function parser(?string $key = null)
     {

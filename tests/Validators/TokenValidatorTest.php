@@ -3,17 +3,17 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test\Validators;
+namespace Jesusalc\JWTAuth\Test\Validators;
 
-use Tymon\JWTAuth\Exceptions\TokenInvalidException;
-use Tymon\JWTAuth\Test\AbstractTestCase;
-use Tymon\JWTAuth\Validators\TokenValidator;
+use Jesusalc\JWTAuth\Exceptions\TokenInvalidException;
+use Jesusalc\JWTAuth\Test\AbstractTestCase;
+use Jesusalc\JWTAuth\Validators\TokenValidator;
 
 class TokenValidatorTest extends AbstractTestCase
 {
@@ -25,7 +25,7 @@ class TokenValidatorTest extends AbstractTestCase
 
     /**
      * @test
-     * @dataProvider \Tymon\JWTAuth\Test\Validators\TokenValidatorTest::dataProviderMalformedTokens
+     * @dataProvider \Jesusalc\JWTAuth\Test\Validators\TokenValidatorTest::dataProviderMalformedTokens
      *
      * @param  string  $token
      */
@@ -36,7 +36,7 @@ class TokenValidatorTest extends AbstractTestCase
 
     /**
      * @test
-     * @dataProvider \Tymon\JWTAuth\Test\Validators\TokenValidatorTest::dataProviderMalformedTokens
+     * @dataProvider \Jesusalc\JWTAuth\Test\Validators\TokenValidatorTest::dataProviderMalformedTokens
      *
      * @param  string  $token
      */
@@ -55,7 +55,7 @@ class TokenValidatorTest extends AbstractTestCase
 
     /**
      * @test
-     * @dataProvider \Tymon\JWTAuth\Test\Validators\TokenValidatorTest::dataProviderTokensWithWrongSegmentsNumber
+     * @dataProvider \Jesusalc\JWTAuth\Test\Validators\TokenValidatorTest::dataProviderTokensWithWrongSegmentsNumber
      *
      * @param  string  $token
      */
@@ -67,7 +67,7 @@ class TokenValidatorTest extends AbstractTestCase
 
     /**
      * @test
-     * @dataProvider \Tymon\JWTAuth\Test\Validators\TokenValidatorTest::dataProviderTokensWithWrongSegmentsNumber
+     * @dataProvider \Jesusalc\JWTAuth\Test\Validators\TokenValidatorTest::dataProviderTokensWithWrongSegmentsNumber
      *
      * @param  string  $token
      */

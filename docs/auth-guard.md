@@ -47,13 +47,13 @@ Get the currently authenticated user or throw an exception.
 ```php
 try {
     $user = auth()->userOrFail();
-} catch (\Tymon\JWTAuth\Exceptions\UserNotDefinedException $e) {
+} catch (\Jesusalc\JWTAuth\Exceptions\UserNotDefinedException $e) {
     // do something
 }
 
 ```
 
-If the user is not set, then a `Tymon\JWTAuth\Exceptions\UserNotDefinedException` will be thrown
+If the user is not set, then a `Jesusalc\JWTAuth\Exceptions\UserNotDefinedException` will be thrown
 
 ### logout()
 
@@ -119,7 +119,7 @@ $payload->toArray(); // = ['sub' => 123, 'exp' => 123456, 'jti' => 'asfe4...'] e
 ?> Payloads are immutable and cannot be altered after they have been created.
 
 ```php
-// This will throw a \Tymon\JWTAuth\Exceptions\PayloadException
+// This will throw a \Jesusalc\JWTAuth\Exceptions\PayloadException
 $payload['sub'] = 1;
 ```
 

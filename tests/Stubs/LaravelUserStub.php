@@ -3,16 +3,16 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test\Stubs;
+namespace Jesusalc\JWTAuth\Test\Stubs;
 
 use Illuminate\Contracts\Auth\Authenticatable;
-use Tymon\JWTAuth\Contracts\JWTSubject;
+use Jesusalc\JWTAuth\Contracts\JWTSubject;
 
 class LaravelUserStub extends UserStub implements Authenticatable, JWTSubject
 {

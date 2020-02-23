@@ -3,33 +3,33 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Providers;
+namespace Jesusalc\JWTAuth\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Lcobucci\JWT\Builder as JWTBuilder;
 use Lcobucci\JWT\Parser as JWTParser;
-use Tymon\JWTAuth\Blacklist;
-use Tymon\JWTAuth\Builder;
-use Tymon\JWTAuth\Console\JWTGenerateSecretCommand;
-use Tymon\JWTAuth\Contracts\Providers\Auth;
-use Tymon\JWTAuth\Contracts\Providers\JWT as JWTContract;
-use Tymon\JWTAuth\Contracts\Providers\Storage;
-use Tymon\JWTAuth\Http\Parser\AuthHeaders;
-use Tymon\JWTAuth\Http\Parser\Cookies;
-use Tymon\JWTAuth\Http\Parser\InputSource;
-use Tymon\JWTAuth\Http\Parser\Parser;
-use Tymon\JWTAuth\Http\Parser\QueryString;
-use Tymon\JWTAuth\Http\Parser\RouteParams;
-use Tymon\JWTAuth\JWT;
-use Tymon\JWTAuth\JWTGuard;
-use Tymon\JWTAuth\Manager;
-use Tymon\JWTAuth\Providers\JWT\Lcobucci;
+use Jesusalc\JWTAuth\Blacklist;
+use Jesusalc\JWTAuth\Builder;
+use Jesusalc\JWTAuth\Console\JWTGenerateSecretCommand;
+use Jesusalc\JWTAuth\Contracts\Providers\Auth;
+use Jesusalc\JWTAuth\Contracts\Providers\JWT as JWTContract;
+use Jesusalc\JWTAuth\Contracts\Providers\Storage;
+use Jesusalc\JWTAuth\Http\Parser\AuthHeaders;
+use Jesusalc\JWTAuth\Http\Parser\Cookies;
+use Jesusalc\JWTAuth\Http\Parser\InputSource;
+use Jesusalc\JWTAuth\Http\Parser\Parser;
+use Jesusalc\JWTAuth\Http\Parser\QueryString;
+use Jesusalc\JWTAuth\Http\Parser\RouteParams;
+use Jesusalc\JWTAuth\JWT;
+use Jesusalc\JWTAuth\JWTGuard;
+use Jesusalc\JWTAuth\Manager;
+use Jesusalc\JWTAuth\Providers\JWT\Lcobucci;
 
 abstract class AbstractServiceProvider extends ServiceProvider
 {
@@ -56,7 +56,7 @@ abstract class AbstractServiceProvider extends ServiceProvider
         $this->registerJWT();
         $this->registerJWTCommand();
 
-        $this->commands('tymon.jwt.secret');
+        $this->commands('jesusalc.jwt.secret');
     }
 
     /**
@@ -66,7 +66,7 @@ abstract class AbstractServiceProvider extends ServiceProvider
     {
         $this->app['auth']->extend('jwt', function ($app, $name, array $config) {
             $guard = new JwtGuard(
-                $app['tymon.jwt'],
+                $app['jesusalc.jwt'],
                 $app['auth']->createUserProvider($config['provider']),
                 $app['request'],
                 $app['events']
@@ -83,13 +83,13 @@ abstract class AbstractServiceProvider extends ServiceProvider
      */
     protected function registerAliases()
     {
-        $this->app->alias('tymon.jwt', JWT::class);
-        $this->app->alias('tymon.jwt.provider.jwt', JWTContract::class);
-        $this->app->alias('tymon.jwt.provider.jwt.lcobucci', Lcobucci::class);
-        $this->app->alias('tymon.jwt.provider.storage', Storage::class);
-        $this->app->alias('tymon.jwt.builder', Builder::class);
-        $this->app->alias('tymon.jwt.manager', Manager::class);
-        $this->app->alias('tymon.jwt.blacklist', Blacklist::class);
+        $this->app->alias('jesusalc.jwt', JWT::class);
+        $this->app->alias('jesusalc.jwt.provider.jwt', JWTContract::class);
+        $this->app->alias('jesusalc.jwt.provider.jwt.lcobucci', Lcobucci::class);
+        $this->app->alias('jesusalc.jwt.provider.storage', Storage::class);
+        $this->app->alias('jesusalc.jwt.builder', Builder::class);
+        $this->app->alias('jesusalc.jwt.manager', Manager::class);
+        $this->app->alias('jesusalc.jwt.blacklist', Blacklist::class);
     }
 
     /**
@@ -99,7 +99,7 @@ abstract class AbstractServiceProvider extends ServiceProvider
     {
         $this->registerLcobucciProvider();
 
-        $this->app->singleton('tymon.jwt.provider.jwt', function ($app) {
+        $this->app->singleton('jesusalc.jwt.provider.jwt', function ($app) {
             return $this->getConfigInstance('providers.jwt');
         });
     }
@@ -109,7 +109,7 @@ abstract class AbstractServiceProvider extends ServiceProvider
      */
     protected function registerLcobucciProvider()
     {
-        $this->app->singleton('tymon.jwt.provider.jwt.lcobucci', function ($app) {
+        $this->app->singleton('jesusalc.jwt.provider.jwt.lcobucci', function ($app) {
             return new Lcobucci(
                 new JWTBuilder(),
                 new JWTParser(),
@@ -125,7 +125,7 @@ abstract class AbstractServiceProvider extends ServiceProvider
      */
     protected function registerStorageProvider()
     {
-        $this->app->singleton('tymon.jwt.provider.storage', function () {
+        $this->app->singleton('jesusalc.jwt.provider.storage', function () {
             return $this->getConfigInstance('providers.storage');
         });
     }
@@ -135,7 +135,7 @@ abstract class AbstractServiceProvider extends ServiceProvider
      */
     protected function registerBuilder()
     {
-        $this->app->singleton('tymon.jwt.builder', function ($app) {
+        $this->app->singleton('jesusalc.jwt.builder', function ($app) {
             $builder = new Builder($app['request']);
 
             $app->refresh('request', $builder, 'setRequest');
@@ -153,11 +153,11 @@ abstract class AbstractServiceProvider extends ServiceProvider
      */
     protected function registerManager()
     {
-        $this->app->singleton('tymon.jwt.manager', function ($app) {
+        $this->app->singleton('jesusalc.jwt.manager', function ($app) {
             $manager = new Manager(
-                $app['tymon.jwt.provider.jwt'],
-                $app['tymon.jwt.blacklist'],
-                $app['tymon.jwt.builder']
+                $app['jesusalc.jwt.provider.jwt'],
+                $app['jesusalc.jwt.blacklist'],
+                $app['jesusalc.jwt.builder']
             );
 
             return $manager->setBlacklistEnabled((bool) $this->config('blacklist_enabled'));
@@ -169,7 +169,7 @@ abstract class AbstractServiceProvider extends ServiceProvider
      */
     protected function registerTokenParser()
     {
-        $this->app->singleton('tymon.jwt.parser', function ($app) {
+        $this->app->singleton('jesusalc.jwt.parser', function ($app) {
             $parser = new Parser($app['request'], [
                 'header' => new AuthHeaders,
                 'query' => new QueryString,
@@ -189,11 +189,11 @@ abstract class AbstractServiceProvider extends ServiceProvider
      */
     protected function registerJWT()
     {
-        $this->app->singleton('tymon.jwt', function ($app) {
+        $this->app->singleton('jesusalc.jwt', function ($app) {
             return new JWT(
-                $app['tymon.jwt.builder'],
-                $app['tymon.jwt.manager'],
-                $app['tymon.jwt.parser']
+                $app['jesusalc.jwt.builder'],
+                $app['jesusalc.jwt.manager'],
+                $app['jesusalc.jwt.parser']
             );
         });
     }
@@ -203,8 +203,8 @@ abstract class AbstractServiceProvider extends ServiceProvider
      */
     protected function registerJWTBlacklist()
     {
-        $this->app->singleton('tymon.jwt.blacklist', function ($app) {
-            $blacklist = new Blacklist($app['tymon.jwt.provider.storage']);
+        $this->app->singleton('jesusalc.jwt.blacklist', function ($app) {
+            $blacklist = new Blacklist($app['jesusalc.jwt.provider.storage']);
 
             return $blacklist->setGracePeriod($this->config('blacklist_grace_period'));
         });
@@ -215,7 +215,7 @@ abstract class AbstractServiceProvider extends ServiceProvider
      */
     protected function registerJWTCommand()
     {
-        $this->app->singleton('tymon.jwt.secret', function () {
+        $this->app->singleton('jesusalc.jwt.secret', function () {
             return new JWTGenerateSecretCommand;
         });
     }

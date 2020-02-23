@@ -3,13 +3,13 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test\Providers\JWT;
+namespace Jesusalc\JWTAuth\Test\Providers\JWT;
 
 use Exception;
 use InvalidArgumentException;
@@ -17,14 +17,14 @@ use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Signer\Key;
 use Mockery;
-use Tymon\JWTAuth\Claims\Expiration;
-use Tymon\JWTAuth\Claims\IssuedAt;
-use Tymon\JWTAuth\Claims\Issuer;
-use Tymon\JWTAuth\Claims\Subject;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Exceptions\TokenInvalidException;
-use Tymon\JWTAuth\Providers\JWT\Lcobucci;
-use Tymon\JWTAuth\Test\AbstractTestCase;
+use Jesusalc\JWTAuth\Claims\Expiration;
+use Jesusalc\JWTAuth\Claims\IssuedAt;
+use Jesusalc\JWTAuth\Claims\Issuer;
+use Jesusalc\JWTAuth\Claims\Subject;
+use Jesusalc\JWTAuth\Exceptions\JWTException;
+use Jesusalc\JWTAuth\Exceptions\TokenInvalidException;
+use Jesusalc\JWTAuth\Providers\JWT\Lcobucci;
+use Jesusalc\JWTAuth\Test\AbstractTestCase;
 
 class LcobucciTest extends AbstractTestCase
 {
@@ -39,7 +39,7 @@ class LcobucciTest extends AbstractTestCase
     protected $builder;
 
     /**
-     * @var \Tymon\JWTAuth\Providers\JWT\Lcobucci
+     * @var \Jesusalc\JWTAuth\Providers\JWT\Lcobucci
      */
     protected $provider;
 

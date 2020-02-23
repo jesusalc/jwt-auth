@@ -7,5 +7,5 @@
 - Multiple themes
 
 [Get Started](laravel-installation.md)
-[GitHub](https://github.com/tymondesigns/jwt-auth)
+[GitHub](https://github.com/jesusalcdesigns/jwt-auth)
 

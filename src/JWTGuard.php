@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth;
+namespace Jesusalc\JWTAuth;
 
 use Illuminate\Auth\GuardHelpers;
 use Illuminate\Contracts\Auth\Guard;
@@ -20,16 +20,16 @@ use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Traits\ForwardsCalls;
 use Illuminate\Support\Traits\Macroable;
-use Tymon\JWTAuth\Claims\Subject;
-use Tymon\JWTAuth\Contracts\JWTSubject;
-use Tymon\JWTAuth\Events\JWTAttempt;
-use Tymon\JWTAuth\Events\JWTInvalidate;
-use Tymon\JWTAuth\Events\JWTLogin;
-use Tymon\JWTAuth\Events\JWTLogout;
-use Tymon\JWTAuth\Events\JWTRefresh;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Exceptions\UserNotDefinedException;
-use Tymon\JWTAuth\Http\TokenResponse;
+use Jesusalc\JWTAuth\Claims\Subject;
+use Jesusalc\JWTAuth\Contracts\JWTSubject;
+use Jesusalc\JWTAuth\Events\JWTAttempt;
+use Jesusalc\JWTAuth\Events\JWTInvalidate;
+use Jesusalc\JWTAuth\Events\JWTLogin;
+use Jesusalc\JWTAuth\Events\JWTLogout;
+use Jesusalc\JWTAuth\Events\JWTRefresh;
+use Jesusalc\JWTAuth\Exceptions\JWTException;
+use Jesusalc\JWTAuth\Exceptions\UserNotDefinedException;
+use Jesusalc\JWTAuth\Http\TokenResponse;
 
 class JWTGuard implements Guard
 {
@@ -96,7 +96,7 @@ class JWTGuard implements Guard
     /**
      * Get the currently authenticated user or throws an exception.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\UserNotDefinedException
+     * @throws \Jesusalc\JWTAuth\Exceptions\UserNotDefinedException
      *
      * @return \Illuminate\Contracts\Auth\Authenticatable
      */
@@ -138,7 +138,7 @@ class JWTGuard implements Guard
     /**
      * Create a token for a user.
      *
-     * @return \Tymon\JWTAuth\Http\TokenResponse|\Tymon\JWTAuth\Token
+     * @return \Jesusalc\JWTAuth\Http\TokenResponse|\Jesusalc\JWTAuth\Token
      */
     public function login(JWTSubject $user)
     {
@@ -170,7 +170,7 @@ class JWTGuard implements Guard
     /**
      * Refresh the token.
      *
-     * @return \Tymon\JWTAuth\Http\TokenResponse|\Tymon\JWTAuth\Token
+     * @return \Jesusalc\JWTAuth\Http\TokenResponse|\Jesusalc\JWTAuth\Token
      */
     public function refresh()
     {
@@ -270,7 +270,7 @@ class JWTGuard implements Guard
     /**
      * Set the token.
      *
-     * @param  \Tymon\JWTAuth\Token|string  $token
+     * @param  \Jesusalc\JWTAuth\Token|string  $token
      */
     public function setToken($token): self
     {
@@ -348,7 +348,7 @@ class JWTGuard implements Guard
     /**
      * Get the responsable Token.
      *
-     * @return \Tymon\JWTAuth\Http\TokenResponse|\Tymon\JWTAuth\Token
+     * @return \Jesusalc\JWTAuth\Http\TokenResponse|\Jesusalc\JWTAuth\Token
      */
     protected function tokenResponse(Token $token)
     {
@@ -396,7 +396,7 @@ class JWTGuard implements Guard
     /**
      * Ensure that a token is available in the request.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \Jesusalc\JWTAuth\Exceptions\JWTException
      */
     protected function requireToken(): JWT
     {

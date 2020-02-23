@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Providers\JWT;
+namespace Jesusalc\JWTAuth\Providers\JWT;
 
 use Exception;
 use Jose\Component\Checker\AlgorithmChecker;
@@ -29,8 +29,8 @@ use Jose\Component\Signature\Serializer\CompactSerializer;
 use Jose\Component\Signature\Serializer\JWSSerializer;
 use Jose\Component\Signature\Serializer\JWSSerializerManager;
 use RuntimeException;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Exceptions\TokenInvalidException;
+use Jesusalc\JWTAuth\Exceptions\JWTException;
+use Jesusalc\JWTAuth\Exceptions\TokenInvalidException;
 
 class WebToken extends Provider
 {
@@ -52,7 +52,7 @@ class WebToken extends Provider
     /**
      * Create a JSON Web Token.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \Jesusalc\JWTAuth\Exceptions\JWTException
      */
     public function encode(array $payload): string
     {
@@ -72,7 +72,7 @@ class WebToken extends Provider
     /**
      * Decode a JSON Web Token.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \Jesusalc\JWTAuth\Exceptions\JWTException
      */
     public function decode(string $token): array
     {
@@ -90,7 +90,7 @@ class WebToken extends Provider
     /**
      * Get the Algorithm instance.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \Jesusalc\JWTAuth\Exceptions\JWTException
      */
     protected function getAlgorithm(): Algorithm
     {

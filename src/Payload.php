@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth;
+namespace Jesusalc\JWTAuth;
 
 use ArrayAccess;
 use BadMethodCallException;
@@ -21,11 +21,11 @@ use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Traits\ForwardsCalls;
 use JsonSerializable;
-use Tymon\JWTAuth\Claims\Claim;
-use Tymon\JWTAuth\Claims\Collection;
-use Tymon\JWTAuth\Contracts\Claim as ClaimContract;
-use Tymon\JWTAuth\Exceptions\PayloadException;
-use Tymon\JWTAuth\Facades\JWTManager;
+use Jesusalc\JWTAuth\Claims\Claim;
+use Jesusalc\JWTAuth\Claims\Collection;
+use Jesusalc\JWTAuth\Contracts\Claim as ClaimContract;
+use Jesusalc\JWTAuth\Exceptions\PayloadException;
+use Jesusalc\JWTAuth\Facades\JWTManager;
 
 class Payload implements ArrayAccess, Arrayable, Countable, Jsonable, JsonSerializable
 {
@@ -192,7 +192,7 @@ class Payload implements ArrayAccess, Arrayable, Countable, Jsonable, JsonSerial
      * @param  mixed  $key
      * @param  mixed  $value
      *
-     * @throws \Tymon\JWTAuth\Exceptions\PayloadException
+     * @throws \Jesusalc\JWTAuth\Exceptions\PayloadException
      */
     public function offsetSet($key, $value)
     {
@@ -204,7 +204,7 @@ class Payload implements ArrayAccess, Arrayable, Countable, Jsonable, JsonSerial
      *
      * @param  mixed  $key
      *
-     * @throws \Tymon\JWTAuth\Exceptions\PayloadException
+     * @throws \Jesusalc\JWTAuth\Exceptions\PayloadException
      */
     public function offsetUnset($key)
     {
@@ -243,7 +243,7 @@ class Payload implements ArrayAccess, Arrayable, Countable, Jsonable, JsonSerial
         if (preg_match('/get(.+)\b/i', $method, $matches)) {
             $match = $matches[1];
             foreach ($this->claims as $claim) {
-                if (get_class($claim) === 'Tymon\\JWTAuth\\Claims\\'.$match) {
+                if (get_class($claim) === 'Jesusalc\\JWTAuth\\Claims\\'.$match) {
                     return $claim->getValue();
                 }
             }

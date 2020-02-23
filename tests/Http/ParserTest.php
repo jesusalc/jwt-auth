@@ -3,26 +3,26 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test\Http;
+namespace Jesusalc\JWTAuth\Test\Http;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Crypt;
 use Mockery;
-use Tymon\JWTAuth\Http\Parser\AuthHeaders;
-use Tymon\JWTAuth\Http\Parser\Cookies;
-use Tymon\JWTAuth\Http\Parser\InputSource;
-use Tymon\JWTAuth\Http\Parser\LumenRouteParams;
-use Tymon\JWTAuth\Http\Parser\Parser;
-use Tymon\JWTAuth\Http\Parser\QueryString;
-use Tymon\JWTAuth\Http\Parser\RouteParams;
-use Tymon\JWTAuth\Test\AbstractTestCase;
+use Jesusalc\JWTAuth\Http\Parser\AuthHeaders;
+use Jesusalc\JWTAuth\Http\Parser\Cookies;
+use Jesusalc\JWTAuth\Http\Parser\InputSource;
+use Jesusalc\JWTAuth\Http\Parser\LumenRouteParams;
+use Jesusalc\JWTAuth\Http\Parser\Parser;
+use Jesusalc\JWTAuth\Http\Parser\QueryString;
+use Jesusalc\JWTAuth\Http\Parser\RouteParams;
+use Jesusalc\JWTAuth\Test\AbstractTestCase;
 
 class ParserTest extends AbstractTestCase
 {

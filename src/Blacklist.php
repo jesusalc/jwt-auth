@@ -5,20 +5,20 @@ declare(strict_types=1);
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth;
+namespace Jesusalc\JWTAuth;
 
-use Tymon\JWTAuth\Claims\Expiration;
-use Tymon\JWTAuth\Claims\JwtId;
-use Tymon\JWTAuth\Contracts\Providers\Storage;
-use function Tymon\JWTAuth\Support\is_future;
-use function Tymon\JWTAuth\Support\now;
-use function Tymon\JWTAuth\Support\timestamp;
+use Jesusalc\JWTAuth\Claims\Expiration;
+use Jesusalc\JWTAuth\Claims\JwtId;
+use Jesusalc\JWTAuth\Contracts\Providers\Storage;
+use function Jesusalc\JWTAuth\Support\is_future;
+use function Jesusalc\JWTAuth\Support\now;
+use function Jesusalc\JWTAuth\Support\timestamp;
 
 class Blacklist
 {

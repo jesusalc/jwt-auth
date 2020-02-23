@@ -5,7 +5,7 @@
 Run the following command to pull in the latest version:
 
 ```bash
-composer require tymon/jwt-auth
+composer require jesusalc/jwt-auth
 ```
 
 -------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ Add the service provider to the `providers` array in the `config/app.php` config
 'providers' => [
     ...
 
-    Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+    Jesusalc\JWTAuth\Providers\LaravelServiceProvider::class,
 ]
 ```
 
@@ -29,7 +29,7 @@ Add the service provider to the `providers` array in the `config/app.php` config
 Run the following command to publish the package config file:
 
 ```bash
-php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+php artisan vendor:publish --provider="Jesusalc\JWTAuth\Providers\LaravelServiceProvider"
 ```
 
 You should now have a `config/jwt.php` file that allows you to configure the basics of this package.

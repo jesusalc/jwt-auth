@@ -3,48 +3,48 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test;
+namespace Jesusalc\JWTAuth\Test;
 
 use Illuminate\Http\Request;
 use Mockery;
-use Tymon\JWTAuth\Blacklist;
-use Tymon\JWTAuth\Builder;
-use Tymon\JWTAuth\Claims\HashedSubject;
-use Tymon\JWTAuth\Claims\Subject;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Exceptions\TokenInvalidException;
-use Tymon\JWTAuth\Http\Parser\Parser;
-use Tymon\JWTAuth\JWT;
-use Tymon\JWTAuth\Manager;
-use Tymon\JWTAuth\Payload;
-use Tymon\JWTAuth\Test\Stubs\UserStub;
-use Tymon\JWTAuth\Token;
+use Jesusalc\JWTAuth\Blacklist;
+use Jesusalc\JWTAuth\Builder;
+use Jesusalc\JWTAuth\Claims\HashedSubject;
+use Jesusalc\JWTAuth\Claims\Subject;
+use Jesusalc\JWTAuth\Exceptions\JWTException;
+use Jesusalc\JWTAuth\Exceptions\TokenInvalidException;
+use Jesusalc\JWTAuth\Http\Parser\Parser;
+use Jesusalc\JWTAuth\JWT;
+use Jesusalc\JWTAuth\Manager;
+use Jesusalc\JWTAuth\Payload;
+use Jesusalc\JWTAuth\Test\Stubs\UserStub;
+use Jesusalc\JWTAuth\Token;
 
 class JWTTest extends AbstractTestCase
 {
     /**
-     * @var \Mockery\MockInterface|\Tymon\JWTAuth\Builder
+     * @var \Mockery\MockInterface|\Jesusalc\JWTAuth\Builder
      */
     protected $builder;
 
     /**
-     * @var \Mockery\MockInterface|\Tymon\JWTAuth\Manager
+     * @var \Mockery\MockInterface|\Jesusalc\JWTAuth\Manager
      */
     protected $manager;
 
     /**
-     * @var \Mockery\MockInterface|\Tymon\JWTAuth\Http\Parser\Parser
+     * @var \Mockery\MockInterface|\Jesusalc\JWTAuth\Http\Parser\Parser
      */
     protected $parser;
 
     /**
-     * @var \Tymon\JWTAuth\JWT
+     * @var \Jesusalc\JWTAuth\JWT
      */
     protected $jwt;
 
@@ -104,7 +104,7 @@ class JWTTest extends AbstractTestCase
 
         $this->assertTrue(
             $this->jwt->setToken('foo.bar.baz')
-                ->checkSubjectModel('Tymon\JWTAuth\Test\Stubs\UserStub', $payload)
+                ->checkSubjectModel('Jesusalc\JWTAuth\Test\Stubs\UserStub', $payload)
         );
     }
 
@@ -113,12 +113,12 @@ class JWTTest extends AbstractTestCase
     {
         $payload = Mockery::mock(Payload::class)->shouldReceive('get')
             ->with(HashedSubject::NAME)
-            ->andReturn(sha1('Tymon\JWTAuth\Test\Stubs\UserStub1'))
+            ->andReturn(sha1('Jesusalc\JWTAuth\Test\Stubs\UserStub1'))
             ->getMock();
 
         $this->assertFalse(
             $this->jwt->setToken('foo.bar.baz')
-                ->checkSubjectModel('Tymon\JWTAuth\Test\Stubs\UserStub', $payload)
+                ->checkSubjectModel('Jesusalc\JWTAuth\Test\Stubs\UserStub', $payload)
         );
     }
 

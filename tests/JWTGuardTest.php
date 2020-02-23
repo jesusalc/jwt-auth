@@ -3,37 +3,37 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test;
+namespace Jesusalc\JWTAuth\Test;
 
 use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Testing\Fakes\EventFake;
 use Mockery;
-use Tymon\JWTAuth\Builder;
-use Tymon\JWTAuth\Claims\Subject;
-use Tymon\JWTAuth\Events\JWTAttempt;
-use Tymon\JWTAuth\Events\JWTInvalidate;
-use Tymon\JWTAuth\Events\JWTLogin;
-use Tymon\JWTAuth\Events\JWTLogout;
-use Tymon\JWTAuth\Events\JWTRefresh;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Exceptions\UserNotDefinedException;
-use Tymon\JWTAuth\JWT;
-use Tymon\JWTAuth\JWTGuard;
-use Tymon\JWTAuth\Payload;
-use Tymon\JWTAuth\Test\Stubs\LaravelUserStub;
-use Tymon\JWTAuth\Token;
+use Jesusalc\JWTAuth\Builder;
+use Jesusalc\JWTAuth\Claims\Subject;
+use Jesusalc\JWTAuth\Events\JWTAttempt;
+use Jesusalc\JWTAuth\Events\JWTInvalidate;
+use Jesusalc\JWTAuth\Events\JWTLogin;
+use Jesusalc\JWTAuth\Events\JWTLogout;
+use Jesusalc\JWTAuth\Events\JWTRefresh;
+use Jesusalc\JWTAuth\Exceptions\JWTException;
+use Jesusalc\JWTAuth\Exceptions\UserNotDefinedException;
+use Jesusalc\JWTAuth\JWT;
+use Jesusalc\JWTAuth\JWTGuard;
+use Jesusalc\JWTAuth\Payload;
+use Jesusalc\JWTAuth\Test\Stubs\LaravelUserStub;
+use Jesusalc\JWTAuth\Token;
 
 class JWTGuardTest extends AbstractTestCase
 {
     /**
-     * @var \Tymon\JWTAuth\JWT|\Mockery\MockInterface
+     * @var \Jesusalc\JWTAuth\JWT|\Mockery\MockInterface
      */
     protected $jwt;
 
@@ -43,7 +43,7 @@ class JWTGuardTest extends AbstractTestCase
     protected $provider;
 
     /**
-     * @var \Tymon\JWTAuth\JWTGuard|\Mockery\MockInterface
+     * @var \Jesusalc\JWTAuth\JWTGuard|\Mockery\MockInterface
      */
     protected $guard;
 
@@ -137,12 +137,12 @@ class JWTGuardTest extends AbstractTestCase
             ->andReturn($payload);
         $this->jwt->shouldReceive('checkSubjectModel')
             ->once()
-            ->with('\Tymon\JWTAuth\Test\Stubs\LaravelUserStub', $payload)
+            ->with('\Jesusalc\JWTAuth\Test\Stubs\LaravelUserStub', $payload)
             ->andReturn(true);
 
         $this->provider->shouldReceive('getModel')
             ->once()
-            ->andReturn('\Tymon\JWTAuth\Test\Stubs\LaravelUserStub');
+            ->andReturn('\Jesusalc\JWTAuth\Test\Stubs\LaravelUserStub');
         $this->provider->shouldReceive('retrieveById')
             ->once()
             ->with(1)

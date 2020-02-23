@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Providers\JWT;
+namespace Jesusalc\JWTAuth\Providers\JWT;
 
 use Exception;
 use Illuminate\Support\Collection;
@@ -19,8 +19,8 @@ use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Signer;
 use ReflectionClass;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Exceptions\TokenInvalidException;
+use Jesusalc\JWTAuth\Exceptions\JWTException;
+use Jesusalc\JWTAuth\Exceptions\TokenInvalidException;
 
 class Lcobucci extends Provider
 {
@@ -76,7 +76,7 @@ class Lcobucci extends Provider
     /**
      * Create a JSON Web Token.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \Jesusalc\JWTAuth\Exceptions\JWTException
      */
     public function encode(array $payload): string
     {
@@ -98,7 +98,7 @@ class Lcobucci extends Provider
     /**
      * Decode a JSON Web Token.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \Jesusalc\JWTAuth\Exceptions\JWTException
      */
     public function decode(string $token): array
     {
@@ -124,7 +124,7 @@ class Lcobucci extends Provider
     /**
      * Get the Signer instance.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \Jesusalc\JWTAuth\Exceptions\JWTException
      */
     protected function getSigner(): Signer
     {

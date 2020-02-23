@@ -5,17 +5,17 @@ declare(strict_types=1);
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Contracts\Providers;
+namespace Jesusalc\JWTAuth\Contracts\Providers;
 
-use Tymon\JWTAuth\Options;
-use Tymon\JWTAuth\Payload;
-use Tymon\JWTAuth\Token;
+use Jesusalc\JWTAuth\Options;
+use Jesusalc\JWTAuth\Payload;
+use Jesusalc\JWTAuth\Token;
 
 interface JWT
 {

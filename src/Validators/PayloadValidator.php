@@ -3,27 +3,27 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Validators;
+namespace Jesusalc\JWTAuth\Validators;
 
 use Illuminate\Support\Arr;
-use Tymon\JWTAuth\Claims\Collection;
-use Tymon\JWTAuth\Claims\Expiration;
-use Tymon\JWTAuth\Options;
-use Tymon\JWTAuth\Payload;
+use Jesusalc\JWTAuth\Claims\Collection;
+use Jesusalc\JWTAuth\Claims\Expiration;
+use Jesusalc\JWTAuth\Options;
+use Jesusalc\JWTAuth\Payload;
 
 class PayloadValidator extends Validator
 {
     /**
      * Run the validations on the payload array.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\TokenExpiredException
-     * @throws \Tymon\JWTAuth\Exceptions\TokenInvalidException
+     * @throws \Jesusalc\JWTAuth\Exceptions\TokenExpiredException
+     * @throws \Jesusalc\JWTAuth\Exceptions\TokenInvalidException
      */
     public static function check(Collection $claims, ?Options $options = null): Payload
     {

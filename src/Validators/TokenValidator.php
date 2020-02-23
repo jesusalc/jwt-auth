@@ -3,20 +3,20 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Validators;
+namespace Jesusalc\JWTAuth\Validators;
 
 class TokenValidator extends Validator
 {
     /**
      * Check the structure of the token.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\TokenInvalidException
+     * @throws \Jesusalc\JWTAuth\Exceptions\TokenInvalidException
      */
     public static function check(string $token): string
     {

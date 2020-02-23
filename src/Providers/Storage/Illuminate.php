@@ -3,17 +3,17 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Providers\Storage;
+namespace Jesusalc\JWTAuth\Providers\Storage;
 
 use BadMethodCallException;
 use Illuminate\Contracts\Cache\Repository as CacheContract;
-use Tymon\JWTAuth\Contracts\Providers\Storage;
+use Jesusalc\JWTAuth\Contracts\Providers\Storage;
 
 class Illuminate implements Storage
 {
@@ -25,7 +25,7 @@ class Illuminate implements Storage
     /**
      * The used cache tag.
      */
-    protected string $tag = 'tymon.jwt';
+    protected string $tag = 'jesusalc.jwt';
 
     /**
      * Whether the storage driver supports tagging.

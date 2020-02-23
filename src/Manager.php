@@ -5,19 +5,19 @@ declare(strict_types=1);
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth;
+namespace Jesusalc\JWTAuth;
 
-use Tymon\JWTAuth\Contracts\JWTSubject;
-use Tymon\JWTAuth\Contracts\Providers\JWT as JWTContract;
-use Tymon\JWTAuth\Exceptions\JWTException;
-use Tymon\JWTAuth\Exceptions\TokenBlacklistedException;
-use Tymon\JWTAuth\Support\CustomClaims;
+use Jesusalc\JWTAuth\Contracts\JWTSubject;
+use Jesusalc\JWTAuth\Contracts\Providers\JWT as JWTContract;
+use Jesusalc\JWTAuth\Exceptions\JWTException;
+use Jesusalc\JWTAuth\Exceptions\TokenBlacklistedException;
+use Jesusalc\JWTAuth\Support\CustomClaims;
 
 class Manager
 {
@@ -64,7 +64,7 @@ class Manager
     /**
      * Decode a Token and return the Payload.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\TokenBlacklistedException
+     * @throws \Jesusalc\JWTAuth\Exceptions\TokenBlacklistedException
      */
     public function decode(Token $token, bool $checkBlacklist = true): Payload
     {
@@ -97,7 +97,7 @@ class Manager
     /**
      * Invalidate a Token by adding it to the blacklist.
      *
-     * @throws \Tymon\JWTAuth\Exceptions\JWTException
+     * @throws \Jesusalc\JWTAuth\Exceptions\JWTException
      */
     public function invalidate(Token $token): void
     {

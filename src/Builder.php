@@ -5,20 +5,20 @@ declare(strict_types=1);
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth;
+namespace Jesusalc\JWTAuth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
-use Tymon\JWTAuth\Claims\Factory as ClaimFactory;
-use Tymon\JWTAuth\Contracts\JWTSubject;
-use function Tymon\JWTAuth\Support\now;
-use function Tymon\JWTAuth\Support\timestamp;
+use Jesusalc\JWTAuth\Claims\Factory as ClaimFactory;
+use Jesusalc\JWTAuth\Contracts\JWTSubject;
+use function Jesusalc\JWTAuth\Support\now;
+use function Jesusalc\JWTAuth\Support\timestamp;
 
 class Builder
 {

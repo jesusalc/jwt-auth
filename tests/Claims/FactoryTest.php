@@ -3,24 +3,24 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test\Claims;
+namespace Jesusalc\JWTAuth\Test\Claims;
 
-use Tymon\JWTAuth\Claims\Custom;
-use Tymon\JWTAuth\Claims\Expiration;
-use Tymon\JWTAuth\Claims\Factory;
-use Tymon\JWTAuth\Claims\IssuedAt;
-use Tymon\JWTAuth\Claims\Issuer;
-use Tymon\JWTAuth\Claims\JwtId;
-use Tymon\JWTAuth\Claims\NotBefore;
-use Tymon\JWTAuth\Claims\Subject;
-use Tymon\JWTAuth\Options;
-use Tymon\JWTAuth\Test\AbstractTestCase;
+use Jesusalc\JWTAuth\Claims\Custom;
+use Jesusalc\JWTAuth\Claims\Expiration;
+use Jesusalc\JWTAuth\Claims\Factory;
+use Jesusalc\JWTAuth\Claims\IssuedAt;
+use Jesusalc\JWTAuth\Claims\Issuer;
+use Jesusalc\JWTAuth\Claims\JwtId;
+use Jesusalc\JWTAuth\Claims\NotBefore;
+use Jesusalc\JWTAuth\Claims\Subject;
+use Jesusalc\JWTAuth\Options;
+use Jesusalc\JWTAuth\Test\AbstractTestCase;
 
 class FactoryTest extends AbstractTestCase
 {

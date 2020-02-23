@@ -5,7 +5,7 @@
 Run the following command to pull in the latest version:
 
 ```bash
-composer require tymon/jwt-auth
+composer require jesusalc/jwt-auth
 ```
 
 -------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ Add the following snippet to the `bootstrap/app.php` file under the providers se
 $app->register(App\Providers\AuthServiceProvider::class);
 
 // Add this line
-$app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
+$app->register(Jesusalc\JWTAuth\Providers\LumenServiceProvider::class);
 ```
 
 Then uncomment the `auth` middleware in the same file:

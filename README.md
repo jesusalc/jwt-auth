@@ -1,15 +1,15 @@
 ![jwt-auth-banner](https://cloud.githubusercontent.com/assets/1801923/9915273/119b9350-5cae-11e5-850b-c941cac60b32.png)
 
-[![Build Status](http://img.shields.io/travis/tymondesigns/jwt-auth/master.svg?style=flat-square&logo=travis)](https://travis-ci.org/tymondesigns/jwt-auth)
-[![Codecov branch](https://img.shields.io/codecov/c/github/tymondesigns/jwt-auth/develop.svg?style=flat-square&logo=codecov)](https://codecov.io/github/tymondesigns/jwt-auth)
+[![Build Status](http://img.shields.io/travis/jesusalcdesigns/jwt-auth/master.svg?style=flat-square&logo=travis)](https://travis-ci.org/jesusalcdesigns/jwt-auth)
+[![Codecov branch](https://img.shields.io/codecov/c/github/jesusalcdesigns/jwt-auth/develop.svg?style=flat-square&logo=codecov)](https://codecov.io/github/jesusalcdesigns/jwt-auth)
 [![StyleCI](https://styleci.io/repos/23680678/shield?style=flat-square&logo=styleci)](https://styleci.io/repos/23680678)
-[![Latest Version](http://img.shields.io/packagist/v/tymon/jwt-auth.svg?style=flat-square&logo=packagist)](https://packagist.org/packages/tymon/jwt-auth)
-[![Latest Dev Version](https://img.shields.io/packagist/vpre/tymon/jwt-auth.svg?style=flat-square&logo=packagist)](https://packagist.org/packages/tymon/jwt-auth#dev-develop)
-[![Monthly Downloads](https://img.shields.io/packagist/dm/tymon/jwt-auth.svg?style=flat-square&logo=packagist)](https://packagist.org/packages/tymon/jwt-auth)
+[![Latest Version](http://img.shields.io/packagist/v/jesusalc/jwt-auth.svg?style=flat-square&logo=packagist)](https://packagist.org/packages/jesusalc/jwt-auth)
+[![Latest Dev Version](https://img.shields.io/packagist/vpre/jesusalc/jwt-auth.svg?style=flat-square&logo=packagist)](https://packagist.org/packages/jesusalc/jwt-auth#dev-develop)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/jesusalc/jwt-auth.svg?style=flat-square&logo=packagist)](https://packagist.org/packages/jesusalc/jwt-auth)
 
 ## Documentation
 
-For version `0.5.*` See the [WIKI](https://github.com/tymondesigns/jwt-auth/wiki) for documentation.
+For version `0.5.*` See the [WIKI](https://github.com/jesusalcdesigns/jwt-auth/wiki) for documentation.
 
 Documentation for `1.0.0` is coming soon, but there is an unfinished guide [here](http://jwt-auth.readthedocs.io)
 
@@ -23,6 +23,6 @@ If you want to easily add secure authentication to Laravel apps, feel free to ch
 
 The MIT License (MIT)
 
-[![Beerpay](https://beerpay.io/tymondesigns/jwt-auth/badge.svg)](https://beerpay.io/tymondesigns/jwt-auth)
+[![Beerpay](https://beerpay.io/jesusalcdesigns/jwt-auth/badge.svg)](https://beerpay.io/jesusalcdesigns/jwt-auth)
 
 [![SensioLabs Insight](https://insight.sensiolabs.com/projects/ba600082-7869-4ea8-b877-0bf6a86d4988/small.png)](https://insight.sensiolabs.com/projects/ba600082-7869-4ea8-b877-0bf6a86d4988)

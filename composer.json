@@ -16,9 +16,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Sean Tymon",
-            "email": "tymon148@gmail.com",
-            "homepage": "https://tymon.xyz",
+            "name": "Sean Jesusalc",
+            "email": "jesusalc148@gmail.com",
+            "homepage": "https://jesusalc.xyz",
             "role": "Developer"
         }
     ],
@@ -50,12 +50,12 @@
             "src/Support/helpers.php"
         ],
         "psr-4": {
-            "Tymon\\JWTAuth\\": "src/"
+            "Jesusalc\\JWTAuth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tymon\\JWTAuth\\Test\\": "tests/"
+            "Jesusalc\\JWTAuth\\Test\\": "tests/"
         }
     },
     "extra": {
@@ -64,11 +64,11 @@
         },
         "laravel": {
             "aliases": {
-                "JWTManager": "Tymon\\JWTAuth\\Facades\\JWTManager",
-                "JWTProvider": "Tymon\\JWTAuth\\Facades\\JWTProvider"
+                "JWTManager": "Jesusalc\\JWTAuth\\Facades\\JWTManager",
+                "JWTProvider": "Jesusalc\\JWTAuth\\Facades\\JWTProvider"
             },
             "providers": [
-                "Tymon\\JWTAuth\\Providers\\LaravelServiceProvider"
+                "Jesusalc\\JWTAuth\\Providers\\LaravelServiceProvider"
             ]
         }
     },

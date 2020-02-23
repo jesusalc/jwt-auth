@@ -3,27 +3,27 @@
 /*
  * This file is part of jwt-auth.
  *
- * (c) Sean Tymon <tymon148@gmail.com>
+ * (c) Sean Jesusalc <jesusalc148@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Tymon\JWTAuth\Test\Validators;
+namespace Jesusalc\JWTAuth\Test\Validators;
 
-use Tymon\JWTAuth\Claims\Collection;
-use Tymon\JWTAuth\Claims\Expiration;
-use Tymon\JWTAuth\Claims\IssuedAt;
-use Tymon\JWTAuth\Claims\Issuer;
-use Tymon\JWTAuth\Claims\JwtId;
-use Tymon\JWTAuth\Claims\NotBefore;
-use Tymon\JWTAuth\Claims\Subject;
-use Tymon\JWTAuth\Exceptions\InvalidClaimException;
-use Tymon\JWTAuth\Exceptions\TokenExpiredException;
-use Tymon\JWTAuth\Exceptions\TokenInvalidException;
-use Tymon\JWTAuth\Options;
-use Tymon\JWTAuth\Test\AbstractTestCase;
-use Tymon\JWTAuth\Validators\PayloadValidator;
+use Jesusalc\JWTAuth\Claims\Collection;
+use Jesusalc\JWTAuth\Claims\Expiration;
+use Jesusalc\JWTAuth\Claims\IssuedAt;
+use Jesusalc\JWTAuth\Claims\Issuer;
+use Jesusalc\JWTAuth\Claims\JwtId;
+use Jesusalc\JWTAuth\Claims\NotBefore;
+use Jesusalc\JWTAuth\Claims\Subject;
+use Jesusalc\JWTAuth\Exceptions\InvalidClaimException;
+use Jesusalc\JWTAuth\Exceptions\TokenExpiredException;
+use Jesusalc\JWTAuth\Exceptions\TokenInvalidException;
+use Jesusalc\JWTAuth\Options;
+use Jesusalc\JWTAuth\Test\AbstractTestCase;
+use Jesusalc\JWTAuth\Validators\PayloadValidator;
 
 class PayloadValidatorTest extends AbstractTestCase
 {

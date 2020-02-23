@@ -11,5 +11,5 @@
 - [Resources](resources.md)
 
 - **Links**
-  - [![Github](https://icongr.am/simple/github.svg?color=808080&size=16)Github](https://github.com/tymondesigns/jwt-auth)
-  - [![Twitter](https://icongr.am/simple/twitter.svg?colored&size=16)@tymondesigns](http://twitter.com/tymondesigns)
+  - [![Github](https://icongr.am/simple/github.svg?color=808080&size=16)Github](https://github.com/jesusalcdesigns/jwt-auth)
+  - [![Twitter](https://icongr.am/simple/twitter.svg?colored&size=16)@jesusalcdesigns](http://twitter.com/jesusalcdesigns)
